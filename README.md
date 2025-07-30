@@ -57,13 +57,7 @@
 
 ## 6. Proje Scaffold ve Klasör Yapısı
 
-Temel scaffold komutu:
-
-```bash
-npx create-next-app@latest . --typescript
-```
-
-Önerilen klasör yapısı:
+Aşağıda proje kökünden başlayarak, public, src ve diğer tüm yapıların tam klasör ağacı yer almaktadır:
 
 ```plaintext
 project-root/
@@ -81,9 +75,9 @@ project-root/
 │   ├── robots.txt
 │   ├── site.webmanifest
 │   ├── locales/                    # i18n çeviri dosyaları
-│   │   ├── en/
+│   │   ├── en/                     # İngilizce çeviriler
 │   │   │   └── common.json
-│   │   └── tr/
+│   │   └── tr/                     # Türkçe çeviriler
 │   │       └── common.json
 │   └── assets/                     # Doğrudan URL ile erişilen medya
 │       ├── images/
@@ -114,7 +108,7 @@ project-root/
 │   │   │   ├── index.tsx           # /products
 │   │   │   └── [id].tsx            # /products/[id]
 │   │   └── api/                    # Next.js API routes (opsiyonel)
-│   │       └── auth/               # Örn. /api/auth/send-reset-email
+│   │       └── auth/               # /api/auth/send-reset-email
 │   │
 │   ├── components/                 # Atomic Design hiyerarşisi
 │   │   ├── atoms/                  # Button, Input, Icon, Text…
@@ -171,9 +165,6 @@ project-root/
 │   │   ├── next.d.ts               # Next.js augmentations
 │   │   └── models/                 # User.ts, Product.ts, Dashboard.ts
 │   │
-│   ├── data/                       # Statik/mock JSON veriler
-│   │   └── mockUsers.json
-│   │
 │   └── tests/                      # Birim ve entegrasyon testleri
 │       ├── unit/
 │       │   ├── components/         # Button.test.tsx
@@ -207,60 +198,47 @@ project-root/
 ├── package.json                    # Bağımlılıklar & script’ler
 ├── package-lock.json               # Kilitlenmiş bağımlılıklar
 └── README.md                       # Proje açıklaması, kurulum ve kullanım
+```
 
+## 7. Kod Standartları ve Linting Kod Standartları ve Linting Kod Standartları ve Linting
 
-7. Kod Standartları ve Linting
+* **ESLint**: `eslint --init` veya topluluk ayarları.
+* **Prettier**: `.prettierrc` ile kod biçimlendirme.
+* **Husky & Commitlint**: Pre-commit hook, mesaj doğrulama.
 
-ESLint: eslint --init veya topluluk ayarları.
+## 8. İlk Özellik Geliştirme Akışı
 
-Prettier: .prettierrc ile kod biçimlendirme.
+1. Yeni bir feature branch açın: `git checkout -b feature/login`
+2. Bileşen, sayfa ve stil dosyalarını ilgili klasöre ekleyin.
+3. State ve API katmanını oluşturun.
+4. Lokal olarak test edin, F5 ile UI akışını doğrulayın.
+5. Commit mesajı yazın, PR açın.
 
-Husky & Commitlint: Pre-commit hook, mesaj doğrulama.
+## 9. Test ve Kalite Güvencesi
 
-8. İlk Özellik Geliştirme Akışı
+* **Unit Test**: Jest + React Testing Library.
+* **E2E Test**: Cypress veya Playwright.
+* **Coverage**: %80+ hedefleyin.
+* **Lint & Type Check**: `npm run lint`, `npm run type-check`.
 
-Yeni bir feature branch açın: git checkout -b feature/login
+## 10. CI/CD Entegrasyonu
 
-Bileşen, sayfa ve stil dosyalarını ilgili klasöre ekleyin.
+* **GitHub Actions**: CI workflow (lint, test, build).
+* **Preview Deploy**: Her PR için preview URL.
+* **Prod Deploy**: `main`’e merge’de otomatik deploy.
 
-State ve API katmanını oluşturun.
+## 11. Deploy ve İzleme
 
-Lokal olarak test edin, F5 ile UI akışını doğrulayın.
+* **Hosting**: Vercel veya Netlify.
+* **Analytics**: Google Analytics, Sentry.
+* **Lighthouse**: Performans izleme.
 
-Commit mesajı yazın, PR açın.
+## 12. Dokümantasyon ve Bakım
 
-9. Test ve Kalite Güvencesi
+* **README** güncel kalsın.
+* **Storybook** veya benzeri component dokümantasyonu.
+* **Kod Review**: Haftalık veya sprint sonunda.
 
-Unit Test: Jest + React Testing Library.
+---
 
-E2E Test: Cypress veya Playwright.
-
-Coverage: %80+ hedefleyin.
-
-Lint & Type Check: npm run lint, npm run type-check.
-
-10. CI/CD Entegrasyonu
-
-GitHub Actions: CI workflow (lint, test, build).
-
-Preview Deploy: Her PR için preview URL.
-
-Prod Deploy: main’e merge’de otomatik deploy.
-
-11. Deploy ve İzleme
-
-Hosting: Vercel veya Netlify.
-
-Analytics: Google Analytics, Sentry.
-
-Lighthouse: Performans izleme.
-
-12. Dokümantasyon ve Bakım
-
-README güncel kalsın.
-
-Storybook veya benzeri component dokümantasyonu.
-
-Kod Review: Haftalık veya sprint sonunda.
-
-Bu rehber, projeyi planlama aşamasından deploy’a kadar tam bir süreç tanımı sağlar. İyi kodlamalar!
+**Bu rehber, projeyi planlama aşamasından deploy’a kadar tam bir süreç tanımı sağlar. İyi kodlamalar!**
