@@ -21,19 +21,19 @@
 
 ---
 
-## 1. Giriş ve Hedefler
+## Giriş ve Hedefler
 
 * **Amaç**: Projenin çözmesi gereken sorun ve sağlanacak değer netleştirilmeli.
 * **Kullanıcı**: Hedef kullanıcı kitlesi ve beklentileri tanımlanmalı.
 * **Kapsam**: MVP (Minimum Viable Product) için öncelikli özellikler listelenmeli.
 
-## 2. Proje Planlama
+## Proje Planlama
 
 * **Kullanıcı Hikâyeleri**: ‘‘Kullanıcı sisteme giriş yapabilmeli’’ gibi madde bazlı ifadeler.
 * **Fonksiyonel Gereksinimler**: Auth, veritabanı CRUD, UI akışları.
 * **Zaman Çizelgesi**: Sprint veya iterasyon planı oluşturun.
 
-## 3. Teknoloji Seçimi
+## Teknoloji Seçimi
 
 * **Frontend**: Next.js (Pages Router) veya React App.
 * **Dil & Stil**: TypeScript + Tailwind CSS.
@@ -42,20 +42,20 @@
 * **Test**: Jest, React Testing Library, Cypress.
 * **CI/CD**: GitHub Actions + Vercel/Netlify.
 
-## 4. Repository ve Versiyon Kontrol
+## Repository ve Versiyon Kontrol
 
 * **Repo Oluşturma**: `git init`, uzak repo (GitHub) ekleme.
 * **.gitignore**: Node\_modules, env dosyaları, build klasörleri.
 * **Branch Stratejisi**: `main` (prod), `develop` (test), `feature/<isim>`.
 * **Commit Mesaj Kuralları**: Conventional Commits veya benzeri format.
 
-## 5. Geliştirme Ortamı Kurulumu
+## Geliştirme Ortamı Kurulumu
 
 * **Node & Paket Yöneticisi**: Node.js ≥16, npm veya yarn.
 * **Env Dosyası**: `.env.local` şablonunu `.env.example`’den kopyalayın.
 * **Editor Ayarları**: VSCode, ESlint, Prettier eklentileri.
 
-## 6. Proje Scaffold ve Klasör Yapısı
+## Proje Scaffold ve Klasör Yapısı
 
 Aşağıda proje kökünden başlayarak, public, src ve diğer tüm yapıların tam klasör ağacı yer almaktadır:
 
@@ -200,13 +200,13 @@ project-root/
 └── README.md                       # Proje açıklaması, kurulum ve kullanım
 ```
 
-## 7. Kod Standartları ve Linting Kod Standartları ve Linting Kod Standartları ve Linting
+## Kod Standartları ve Linting Kod Standartları ve Linting Kod Standartları ve Linting
 
 * **ESLint**: `eslint --init` veya topluluk ayarları.
 * **Prettier**: `.prettierrc` ile kod biçimlendirme.
 * **Husky & Commitlint**: Pre-commit hook, mesaj doğrulama.
 
-## 8. İlk Özellik Geliştirme Akışı
+## İlk Özellik Geliştirme Akışı
 
 1. Yeni bir feature branch açın: `git checkout -b feature/login`
 2. Bileşen, sayfa ve stil dosyalarını ilgili klasöre ekleyin.
@@ -214,26 +214,26 @@ project-root/
 4. Lokal olarak test edin, F5 ile UI akışını doğrulayın.
 5. Commit mesajı yazın, PR açın.
 
-## 9. Test ve Kalite Güvencesi
+## Test ve Kalite Güvencesi
 
 * **Unit Test**: Jest + React Testing Library.
 * **E2E Test**: Cypress veya Playwright.
 * **Coverage**: %80+ hedefleyin.
 * **Lint & Type Check**: `npm run lint`, `npm run type-check`.
 
-## 10. CI/CD Entegrasyonu
+## CI/CD Entegrasyonu
 
 * **GitHub Actions**: CI workflow (lint, test, build).
 * **Preview Deploy**: Her PR için preview URL.
 * **Prod Deploy**: `main`’e merge’de otomatik deploy.
 
-## 11. Deploy ve İzleme
+## Deploy ve İzleme
 
 * **Hosting**: Vercel veya Netlify.
 * **Analytics**: Google Analytics, Sentry.
 * **Lighthouse**: Performans izleme.
 
-## 12. Dokümantasyon ve Bakım
+## Dokümantasyon ve Bakım
 
 * **README** güncel kalsın.
 * **Storybook** veya benzeri component dokümantasyonu.
