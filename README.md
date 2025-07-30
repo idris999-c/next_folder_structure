@@ -1,0 +1,1 @@
+# Folder-structure-to-be-created-with-Next.js
